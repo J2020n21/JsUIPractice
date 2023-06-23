@@ -1,0 +1,13 @@
+UI 만드는 스텝
+	1. html/css로 미리 디자인해두기 (필요하면 미리 숨김)
+	2. 필요할때 보여달라고js로 코드짬
+
+	css UI를 숨기고 싶을 때:
+		display:none/block;
+
+	html안의 요소에서:
+		<button onclick="js코드들"> </button>
+
+
+함수사용시 function name(){}
+그리고 사용할 때 name() 형식으로 사용
