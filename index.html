@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <h2>Show Box</h2>
+    <div id="alert" class="alert-box">Alert Box! 
+        <button onclick="boxClose()">Close</button>
+     </div>
 
-    <h1 id="hello"> 안녕하세요 </h1>
-    <h1 id="new"> 초보에용 </h1>
+    <button onclick="boxShow()"> Button </button>
+
 
     <script>
-        document.getElementById('hello').innerHTML ="안 녕";
-        document.getElementById('new').innerHTML ="고수에용";
-        document.getElementById('hello').style.fontSize= "16px";
+
+        function boxShow(){
+            document.getElementById('alert').style.display='block';
+        }
+
+        function boxClose(){
+            document.getElementById('alert').style.display='none';
+        }
+
     </script>
     
 </body>
