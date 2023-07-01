@@ -16,4 +16,27 @@ UI 만드는 스텝
 (가변형태변환)
 
 
-onclick 없이 = addEventListener()
+onclick 없이 = addEventListener(action, function(){})
+
+class 부착식으로 개발하면 (list-group show)
+	애니메이션 추가 용이
+	재사용 용이
+
+class 떼었다 붙였다 하려면 toggle()
+
+
+쿼리 셀렉터로 css양식을 js에서 쓸수있음.
+document.querySelector('.list-group') //클래스 찾을 시
+	다만 맨 위의 한개만 찾아줌
+그러므로
+document.querySelectorAll('.list-group')[1];
+
+jQuery
+ document.querySelector('.navbar-toggler').addEventListener('click',
+        function(){})
+ = $('.navbar-toggler').on('click', function(){})
+
+간단한 애니메이션 효과도 줄 수 있다.
+	fadeOut, slideUp등
+
+
