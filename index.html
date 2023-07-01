@@ -8,23 +8,24 @@
 </head>
 <body>
     <h2>Show Box</h2>
-    <div id="alert" class="alert-box">Alert Box! 
-        <button onclick="boxClose()">Close</button>
+    <div id="alert" class="alert-box">
+        <p>Alert Box!</p>
+        <p id="input"></p>
+        <button onclick="boxShow('none')">Close</button>
      </div>
 
-    <button onclick="boxShow()"> Button </button>
+    <button onclick="boxShow('block'), inputRequire('type id')"> Button1 </button>
+    <button onclick="boxShow('block'), inputRequire('type pw')"> Button2 </button>
 
 
     <script>
-
-        function boxShow(){
-            document.getElementById('alert').style.display='block';
+        function boxShow(show){
+            document.getElementById('alert').style.display = show;
         }
 
-        function boxClose(){
-            document.getElementById('alert').style.display='none';
+        function inputRequire(text){
+            document.getElementById('input').innerHTML = text;
         }
-
     </script>
     
 </body>
