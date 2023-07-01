@@ -11,7 +11,7 @@
     <div id="alert" class="alert-box">
         <p>Alert Box!</p>
         <p id="input"></p>
-        <button onclick="boxShow('none')">Close</button>
+        <button id="close">Close</button>
      </div>
 
     <button onclick="boxShow('block'), inputRequire('type id')"> Button1 </button>
@@ -19,6 +19,10 @@
 
 
     <script>
+        document.getElementById('close').addEventListener('click' , function(){
+            boxShow('none');
+        })
+
         function boxShow(show){
             document.getElementById('alert').style.display = show;
         }
