@@ -45,4 +45,23 @@ jQuery
 	(position과 z-index주기)
 
 
+<UI애니메이션 추가>
+	애니메이션은 js로 구현할 시 성능 저하 가능.
+	되도록 UI애니메이션은 css만으로 처리하는게 좋음(성능때문)
 
+	참고: 애니메이션 속성; display:none 대신
+		visibility:hidden; 사용.
+	transition: all 1s;
+	1.시작형태 2.최종형태 3.트리거 작성 4.transition추가
+
+<form>
+	서버로 정보 전송. (btn type="button/submit")
+	폼 전송 막기:
+		e.preventDefault()
+
+<input>
+	input에서 발생하는 이벤트들
+	input : 쿼리로 선택했던 곳의 값이 변할 때 실행됨
+	change: input과 동일. 그러나 입력값 바뀌고> "포커스를 잃을 때" 발생
+
+	truthy, falsy 자료들
