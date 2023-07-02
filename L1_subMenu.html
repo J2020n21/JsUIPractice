@@ -9,6 +9,15 @@
 </head>
 <body>
 
+  <!-- login Modal popup -->
+  <div class="black-bg">
+    <div class="white-bg">
+      <h4>Log in</h4>
+      <button class="btn btn-danger" id="close">close</button>
+    </div>
+  </div>
+
+  <!-- Menu -->
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <span class="navbar-brand">Navbar</span>
@@ -18,13 +27,17 @@
         </div>
       </nav> 
 
-      <ul class="list-group show">
+      <ul class="list-group">
         <li class="list-group-item">An item</li>
         <li class="list-group-item">A second item</li>
         <li class="list-group-item">A third item</li>
         <li class="list-group-item">A fourth item</li>
         <li class="list-group-item">And a fifth one</li>
       </ul> 
+
+      <!-- modal popup box -->
+      <button id="loginModal">Log in</button>
+
 
       <script  src="https://code.jquery.com/jquery-3.7.0.min.js"  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="  crossorigin="anonymous"></script>
       <script>
@@ -35,6 +48,15 @@
         function(){
             $('.list-group')[0].classList.toggle('show');
         })
+
+        $('#loginModal').on('click', function(){
+          $('.black-bg').addClass('show-modal');
+        })
+
+        $('#close').on('click', function(){
+          $('.black-bg').removeClass('show-modal');
+        })
+
       </script>
 
 

@@ -40,3 +40,9 @@ jQuery
 	fadeOut, slideUp등
 
 
+<모달창>
+	body태그 맨 앞에 붙여야 적용이 잘 된다 (순서 흐름상)
+	(position과 z-index주기)
+
+
+
