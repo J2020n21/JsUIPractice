@@ -75,7 +75,6 @@
         <button id="loginModal" class="btn btn-danger">Log in</button>
       </div>
 
-
       <script>
 
         $('.list-group')
@@ -94,6 +93,25 @@
         })
 
       </script>
+
+      <!-- dark mode button -->
+      <span id="btn-dark" class="badge bg-dark">Dark</span>
+  
+  <script>
+      let click = 0
+    $('#btn-dark').on('click',function(){
+      click += 1;
+      if(click%2 == 0){
+        $('#btn-dark').html('Light');
+        $('body').addClass('dark');
+        }
+      else{
+        $('#btn-dark').html('Dark');
+        $('body').removeClass('dark');
+      }
+      
+    })
+  </script>      
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
