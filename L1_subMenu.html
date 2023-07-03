@@ -60,6 +60,7 @@
         </div>
       </nav> 
 
+      <!-- TODO: nav바 darkmode로 바꿔보기 -->
       <ul class="list-group">
         <li class="list-group-item">An item</li>
         <li class="list-group-item">A second item</li>
@@ -112,6 +113,29 @@
       
     })
   </script>      
+
+  <!-- setTimeout: this div will remove after 5 sec -->
+  <div id="5secBox" class="alert alert-danger">
+    Get free shirt in 5 seconds!
+  </div>
+
+  <script>
+    let second=5;
+    // setTimeout(function(){
+    //   $('#5secBox').hide();
+    // }, 5000);
+
+    setInterval(function(){
+      if(second >= 0){
+      $('#5secBox').html('Get free shirt in '+second+' seconds!');
+      second --;
+    }
+     else{
+      $('#5secBox').hide();
+    }
+    }, 1000);
+
+  </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

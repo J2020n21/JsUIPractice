@@ -65,3 +65,21 @@ jQuery
 	change: input과 동일. 그러나 입력값 바뀌고> "포커스를 잃을 때" 발생
 
 	truthy, falsy 자료들
+
+<변수>
+	let: 재선언X 	재할당O		범위{}
+	const:재선언X	재할당x (상수)	범위{}
+
+<n초뒤 코드시행>
+	setTimeout(콜백,ms);
+	.hide();
+	setInterval()
+
+<문법>
+	if var function은 JS문법
+	쿼리셀렉터, setTimeout(),alert()는 브라우저 문법.(웹api) (중요)
+
+
+
+
+

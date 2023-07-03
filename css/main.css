@@ -48,6 +48,8 @@
   }
 
   #btn-dark{
+    position: absolute;
+    bottom:0;
     width: 80px;
     height: 30px;
     padding-top: 7px;
