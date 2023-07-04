@@ -32,16 +32,27 @@
   <script>
 
     $('#send').on('click',function(e){
-      if( $('#login_id').val()==''|| $('#login_pw').val()==''){
+      var login_id = $('#login_id').val();
+      var login_pw = $('#login_pw').val();
+
+      if(login_id==''||login_pw==''){
         e.preventDefault();
-        alert('Login fail');
+        alert('Login fail: short');
       }
-      else if(($('#login_pw').val().length) < 6){
+      else if((login_pw.length) < 6){
         e.preventDefault();
         alert('Pw needs to be more than 6 letters');
       }
+      else if(!(/\S+@\S+\.\S+/.test(login_id))){
+        e.preventDefault();
+        alert('Id needs to be a form of email');
+      }
+      else if(!(/[A-Z]/.test(login_pw))){
+        e.preventDefault();
+        alert('Pw needs to include at least one capital letter');
+      }
       else{
-        alert('Login success');
+        alert('login success');
       }
     });
 
@@ -92,6 +103,7 @@
         $('#close').on('click', function(){
           $('.black-bg').removeClass('show-modal');
         })
+
 
       </script>
 
