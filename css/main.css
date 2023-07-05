@@ -39,6 +39,7 @@
   .main-bg{
     padding: 100px 20px;
     background: lightgray;
+    margin-bottom: 30px;
   }
 
   /* for dark mode */
@@ -49,9 +50,34 @@
 
   #btn-dark{
     position: absolute;
-    bottom:0;
+    top:0;
     width: 80px;
     height: 30px;
     padding-top: 7px;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-left: 150px;
+  }
+
+  /* slide carousel */
+  .move-left{
+    transform: translateX(-100vw);
+  }
+
+  .slide-container{
+    width: 300vw;
+    transition: all 1s;
+  }
+
+  .slide-box{
+    width: 100vw;
+    float:left;
+  }
+
+  .slide-box img{
+    width: 100%;
+  }
+
+  .slide-btn{
+    width: 100px;
+    height: 100px;
   }

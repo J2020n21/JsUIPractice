@@ -115,7 +115,26 @@ jQuery
 
 
 
+<소수점연산시 주의>
+	작은 오차 발생가능.
+	1.소수점을 전부 x10하여 연산하고 10으로 나누기
+	2.라이브러리
+	3.결과 반올림; .toFixed(); //(몇자리) #사용하면 string으로 변환되므로 형변환 주의
 
+
+<캐러셀 애니메이션>
+	1.시작화면 만들기
+	-컨테이너에 300%, 300vw주고 옆으로 이미지 배치
+	-컨테이너 외부에 overflow: hidden 속성주기
+
+	2.버튼2 누른 후의 최종화면 만들기
+	margin-left: -100vw;
+	근데 이거보다는
+	transform: translateX(-100vw);
+
+	=
+	    transition: all 1s;
+    	    transform: translateX(-100vw);
 
 
 
