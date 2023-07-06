@@ -59,8 +59,20 @@
   }
 
   /* slide carousel */
-  .move-left{
+  .move-2lr{
+    transform: translateX(200vw);
+  }
+  .move-lr{
+    transform: translateX(100vw);
+  }
+  .move{
+    transform: translateX(0vw);
+  }
+  .move-rl{
     transform: translateX(-100vw);
+  }
+  .move-2rl{
+    transform: translateX(-200vw);
   }
 
   .slide-container{
