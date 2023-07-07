@@ -136,6 +136,14 @@ jQuery
 	    transition: all 1s;
     	    transform: translateX(-100vw);
 
+<스크롤이벤트:scroll event listener>
+
+	window.addEventListener('scroll',function(){})
+	window.scrollY
+	window.scrollTo(x,y)
+	window.scrollBy
+
+
 
 
 

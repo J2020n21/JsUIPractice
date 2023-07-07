@@ -1,3 +1,12 @@
+/* basic setting */
+body{
+  margin:0;
+}
+body, div{
+  box-sizing: content-box;
+}
+
+/*  */
 .alert-box{
  background-color: skyblue;
  padding: 20px;
@@ -6,7 +15,7 @@
  display: none;   
 }
 
-/* menu */
+/* menu ,nav*/
 
 .list-group{
     display: none;
@@ -15,6 +24,19 @@
 .show{
     display: block;
 }
+    /* scroll down-shrink logo */
+.navbar{
+  position:fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 5;
+}
+
+.navbar-brand{
+  font-size: 30px;
+  transition: all 1s;
+}
+
 
 /* Modal popup */
 .black-bg {
