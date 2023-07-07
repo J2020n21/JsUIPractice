@@ -60,10 +60,6 @@
 
   </script>
 
-  <!-- alert popup all scrolled down -->
-
-
-
   <!-- Menu + scroll evnet-->
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
@@ -86,6 +82,7 @@
         })
 
       </script>
+    
 
       <!-- TODO: nav바 darkmode로 바꿔보기 -->
       <ul class="list-group">
@@ -164,8 +161,31 @@
 
   </script>
 
+
+  <!-- alert popup all scrolled down -->
+  <!-- <div class="doc" style="width: 200px; height: 100px; overflow-y: scroll;">Lorem ipsum dolor sit amet, 
+    consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at,
+    laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, eligendi quae consectetur
+    praesentium exercitationem.
+  </div>
+
+  <script>
+    $('.doc').on('scroll',function(){
+      var scrolls = $('.doc').scrollTop;
+      var actHeight = $('.doc').scrollHeight;
+      var height = $('.doc').clientHeight;
+      console.log(scroll);
+      if(scrolls+ height > actHeight - 100){
+        alert('You read all the document.');
+      }
+    })
+
+  </script> -->
+  
+
 <!-- fake div box for scroll event -->
 <div style="height: 1000px"></div>
+
 
   <div style="overflow: hidden;">
     <div class="slide-container">
