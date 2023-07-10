@@ -197,3 +197,10 @@ for 안에서 let i = 0 쓰면
 		e.preventDefault();//이벤트 기본동작 막음(form의 submit전송 막기 등)
 		e.stopPropagation(); //상위요소로의 이벤트버블링 막아줌
 	})
+
+
+<html 태그에 정보 숨기기>
+	가능.
+		data-작명="값"
+	출력은
+		셀렉터.dataset.자료이름
