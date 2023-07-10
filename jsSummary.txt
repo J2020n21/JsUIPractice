@@ -187,3 +187,13 @@ for 안에서 let i = 0 쓰면
 
 이런거 체크해보면 됩니다. 그럼 자연스럽게 좋은 코드임  
 
+
+
+<이벤트 버블링 다루기>
+	$().on(click,function(e){
+		
+		e.target; // e = 유저가 실제 클릭한 요소
+		e.currentTarget; //=this = 이벤트리스너 달린 곳
+		e.preventDefault();//이벤트 기본동작 막음(form의 submit전송 막기 등)
+		e.stopPropagation(); //상위요소로의 이벤트버블링 막아줌
+	})
