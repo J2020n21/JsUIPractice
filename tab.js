@@ -21,4 +21,14 @@ function openTab(i){
   $('.tab-content').eq(i).addClass('show');
 }
 
+//상품선택
+$('#goods').on('input',function(e){
+  var value = this.value;
+  if(value == 'shirt'){
+    $('#shirt-select').removeClass('hidden');
+  }
+  else{
+    $('#shirt-select').addClass('hidden');
+  }
+})
 
