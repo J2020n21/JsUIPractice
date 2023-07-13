@@ -23,12 +23,27 @@ function openTab(i){
 
 //상품선택
 $('#goods').on('input',function(e){
-  var value = this.value;
+  var value = e.target.value;
+  console.log(value);
+
   if(value == 'shirt'){
-    $('#shirt-select').removeClass('hidden');
+    $('#select').removeClass('hidden');
+    $('#select').html('');
+    var color = ['Black','White'];
+    var Templet = `<option>${color[0]}</option>
+                    <option>${color[1]}</option>`
+    $('#select').append(Templet);
+  }
+  else if(value =='pants'){
+    $('#select').removeClass('hidden');
+    $('#select').html('');
+    var pantsSizes = [28,30]
+    var Templet= `<option>${pantsSizes[0]}</option>
+                  <option>${pantsSizes[1]}</option>`
+    $('#select').append(Templet);
   }
   else{
-    $('#shirt-select').addClass('hidden');
+    $('#select').addClass('hidden');
   }
 })
 
