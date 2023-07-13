@@ -22,6 +22,10 @@ function openTab(i){
 }
 
 //상품선택
+
+var pants=[28, 30, 32, 34];
+var shirts=['White','Grey','Black'];
+
 $('#goods').on('input',function(e){
   var value = e.target.value;
   console.log(value);
@@ -29,18 +33,18 @@ $('#goods').on('input',function(e){
   if(value == 'shirt'){
     $('#select').removeClass('hidden');
     $('#select').html('');
-    var color = ['Black','White'];
-    var Templet = `<option>${color[0]}</option>
-                    <option>${color[1]}</option>`
-    $('#select').append(Templet);
+    
+    shirts.forEach(function(data){
+      $('#select').append(`<option>${data}</option>`);
+    })
   }
   else if(value =='pants'){
     $('#select').removeClass('hidden');
     $('#select').html('');
-    var pantsSizes = [28,30]
-    var Templet= `<option>${pantsSizes[0]}</option>
-                  <option>${pantsSizes[1]}</option>`
-    $('#select').append(Templet);
+
+    pants.forEach(function(data){
+      $('#select').append(`<option>${data}</option>`);
+    })
   }
   else{
     $('#select').addClass('hidden');

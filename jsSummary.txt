@@ -204,3 +204,22 @@ for 안에서 let i = 0 쓰면
 		data-작명="값"
 	출력은
 		셀렉터.dataset.자료이름
+
+
+<반복문>
+	forEach: array.forEach(=>(a,b){
+		//a는 array안의 데이터.
+		//b는 0부터 1씩 증가하는 정수
+	}) //복붙
+
+	for (var key in obj){
+//obj자료 갯수만큼 반복
+//key값 = 자료 name출력
+	}
+
+<함수 주의점>
+function(){}
+=>(){}
+사용시 안의 this값이 달라질 수 있다.
+	arrow f는 바깥의 this를 가져와서 사용.
+	function(){}안의 this는 안에서 알맞게 재정의 됨
