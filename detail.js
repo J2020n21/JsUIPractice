@@ -51,3 +51,17 @@ $('#goods').on('input',function(e){
   }
 })
 
+//GET request
+$.get('https://codingapple1.github.io/hello.txt').then(function(data){
+  console.log(data);
+});
+
+$.get('https://codingapple1.github.io/price.json')
+.done(function(data){
+  //console.log(data);
+  console.log(data.price);
+})
+.fail(function(err){
+  console.log(err);
+})
+
