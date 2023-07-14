@@ -6,6 +6,7 @@ var products = [
 
 var btn_click=0
 
+
 function addCard(data){
     data.forEach(function(data){
         var templet =`
@@ -13,6 +14,7 @@ function addCard(data){
         <img src="https://via.placeholder.com/600" class="w-100">
         <h5>${data.title}</h5>
         <p>Price : ${data.price}</p>
+        <button class="buy">Buy</button>
         </div>
         `
         $('.row').append(templet);
@@ -29,6 +31,7 @@ products.forEach(function(data,n){
     <img src="https://via.placeholder.com/600" class="w-100">
     <h5>${products[n].title}</h5>
     <p>Price : ${products[n].price}</p>
+    <button class="buy">Buy</button>
     </div>
     `
     $('.row').append(templet);
@@ -93,3 +96,22 @@ $('#filterDown6').click(function(){
 // 응용2. <input>을 이용해 유저가 직접 가격을 입력해서 필터하는 기능?
 
 // 응용3. 원래 순서대로 되돌리기 버튼과 기능을 만들고 싶으면?
+
+//use local storage_ cart
+// localStorage.setItem('name','Kim');
+// localStorage.getItem('name');
+// localStorage.removeItem('name');
+
+$('.buy').click(function(e){
+    var title = $(this).siblings("h5").text(); //.text() or .html()
+    title = JSON.stringify([title]);
+
+    if(localStorage.getItem('cart') != null){
+        var output = JSON.parse(localStorage.cart); //get
+        output.push(title); //add
+        localStorage.setItem('cart', JSON.stringify(output));
+    }
+    else{
+        localStorage.setItem('cart',JSON.stringify([title]));
+    }
+})
