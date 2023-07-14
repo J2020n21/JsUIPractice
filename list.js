@@ -57,3 +57,39 @@ $('#more').click(function(){
     }
 })
 
+//sort
+$('#sortPrice').click(function(){
+    products.sort((a,b)=>{
+        return a.price - b.price;
+    });
+
+    $('.row').html('');
+    addCard(products);
+})
+
+$('#sortAlpha').click(function(){
+
+    products.sort((a,b)=>{
+        if(a.title < b.title){return 1;} //return a to the right
+        else{return -1;} //return b to the right
+    });
+    console.log(products);
+
+    $('.row').html('');
+    addCard(products);
+})
+
+$('#filterDown6').click(function(){
+    var under6 = products.filter((a)=>{
+        return a.price <= 60000;
+    });
+
+    $('.row').html('');
+    addCard(under6);
+})
+
+// 응용1. 가나다순 정렬버튼?
+
+// 응용2. <input>을 이용해 유저가 직접 가격을 입력해서 필터하는 기능?
+
+// 응용3. 원래 순서대로 되돌리기 버튼과 기능을 만들고 싶으면?
